@@ -1,8 +1,13 @@
 import './Buttons.scss'
 
-export default function Buttons({ children }) {
+export default function Buttons({ children, onClick }) {
+
     return (
-        <button className='button'>Click</button>,
-        <button className='button active'>{children}</button>
+        <button
+            className='button active'
+            onClick={onClick}
+        >
+            {children}
+        </button>
     )
-}
+} 

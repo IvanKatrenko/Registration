@@ -2,11 +2,25 @@ import './App.scss'
 import Header from './components/Header'
 import WayToTeach from './components/WayToTeach'
 import Buttons from './components/Buttons/Buttons'
-import { ways } from './data'
+import { ways, differences } from './data'
+import { useState } from 'react' //usestate is hook, create a local state for the component
 
 
 
 export default function App() {
+
+  const [content, setContent] = useState('Hello World')
+
+
+  // let content = 'Hello World'
+
+
+  function handleClick(type) {
+    // content = type
+    setContent(type)
+
+  }
+
   return (
     <div>
 
@@ -27,8 +41,11 @@ export default function App() {
         </section>
         <section>
           <h3>H3</h3>
-          <Buttons> Proba 1</Buttons>
-          <Buttons> Proba 2</Buttons>
+          <Buttons onClick={() => handleClick('way')}> Proba 1</Buttons>
+          <Buttons onClick={() => handleClick('easy')}> Proba 2</Buttons>
+          <Buttons onClick={() => handleClick('program')}> Proba 3</Buttons>
+
+          <p>{differences[content]}</p>
         </section>
       </main>
     </div >

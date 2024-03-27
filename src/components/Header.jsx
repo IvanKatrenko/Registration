@@ -1,6 +1,9 @@
 import logo from '/img/logo.png'
+import { useState } from 'react'
 export default function Header() {
-    const now = new Date()
+    const [now, setNow] = useState(new Date())
+
+    setInterval(() => setNow(new Date()), 1500)
     return (
         <header className='header'>
 
