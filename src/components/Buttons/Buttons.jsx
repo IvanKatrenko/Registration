@@ -1,10 +1,14 @@
 import './Buttons.scss'
 
-export default function Buttons({ children, onClick }) {
+export default function Buttons({ children, onClick, isActive }) {
+
+    let classes = 'button'
+
+    if (isActive) classes += ' active'
 
     return (
         <button
-            className='button active'
+            className={classes}
             onClick={onClick}
         >
             {children}
