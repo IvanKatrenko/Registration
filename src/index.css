@@ -34,6 +34,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #ef8383;
 }
 
 h1 {
@@ -73,16 +74,6 @@ button:focus-visible {
   }
 }
 
-header {
-  height: 50px;
-  display: flex;
-  padding: 0 2rem;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ccc;
-  background: #ccc;
-}
-
 main {
   max-width: 850px;
   margin: 0 auto;
@@ -109,4 +100,13 @@ section ul li {
 .content,
 p {
   padding: 1rem 0;
+}
+
+.centered {
+  text-align: center;
+}
+
+span {
+  color: #e873cf;
+  font-weight: bold;
 }

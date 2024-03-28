@@ -1,4 +1,4 @@
-import './Buttons.scss'
+import classes from './Buttons.module.scss'
 
 export default function Buttons({ children, onClick, isActive }) {
 

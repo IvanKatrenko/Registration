@@ -1,0 +1,22 @@
+.header {
+    height: 50px;
+    display: flex;
+    padding: 0 2rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e873cf;
+    background: #e9a4f2;
+  }
+
+.logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    display: flex;
+    align-items: center;
+    background-image: url('/img/logo.png');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
