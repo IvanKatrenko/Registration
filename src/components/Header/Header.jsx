@@ -1,7 +1,7 @@
 import logo from '/img/logo.png'
 import { useState } from 'react';
-import './Header.scss'
-import { styled } from 'styled-components'
+import './Header.scss';
+import { styled } from 'styled-components';
 
 const HeaderContainer = styled.header`
     height: 50px;

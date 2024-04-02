@@ -10,7 +10,7 @@ import Feedback from './components/Feedback'
 
 export default function App() {
 
-  const [tab, setTab] = useState('feedback')
+  const [tab, setTab] = useState('modal')
 
   return (
     <div>
@@ -18,7 +18,9 @@ export default function App() {
       <main>
         <IntroSection />
 
-        <tabsSection active={tab} onChange={(current) => setTab(current)} />
+        <tabsSection
+          active={tab}
+          onChange={(current) => setTab(current)} />
         {/* // tabsSection is a function that click to (first and second) or feedbacks */}
         {tab === 'main' && (
           <>
@@ -28,6 +30,8 @@ export default function App() {
         )}
 
         {tab === 'feedback' && <Feedback />}
+
+        {tab === 'effecrt' && <Modal />}
 
       </main>
     </div >

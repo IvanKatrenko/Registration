@@ -16,3 +16,8 @@
     background-color: #646cff;
     color: white;
 }
+
+.buttons:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

@@ -1,6 +1,6 @@
 import classes from './Buttons.module.scss'
 
-export default function Buttons({ children, onClick, isActive }) {
+export default function Buttons({ children, isActive, ...props }) {
 
     let classes = 'button'
 
@@ -8,10 +8,10 @@ export default function Buttons({ children, onClick, isActive }) {
 
     return (
         <button
+            {...props}
             className={
                 isActive ? `${classes.button} ${classes.active}` : classes
             }
-            onClick={onClick}
         >
             {children}
         </button>
