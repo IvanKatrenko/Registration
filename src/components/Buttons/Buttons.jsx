@@ -8,7 +8,9 @@ export default function Buttons({ children, onClick, isActive }) {
 
     return (
         <button
-            className={classes}
+            className={
+                isActive ? `${classes.button} ${classes.active}` : classes
+            }
             onClick={onClick}
         >
             {children}

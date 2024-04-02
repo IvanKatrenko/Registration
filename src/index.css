@@ -110,3 +110,12 @@ span {
   color: #e873cf;
   font-weight: bold;
 }
+
+/* work with form */
+.control {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 1rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}

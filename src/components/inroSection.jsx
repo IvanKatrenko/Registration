@@ -16,6 +16,7 @@ export default function inroSection() {
     return e('section', null, [
         e('h1', { className: 'centered', key: 1 }, 'IntroSection'),
         e('h3',
-            { className: 'centered', style: { color: '#666' } }, 'Lorem ...'),
+            { className: 'centered', style: { color: '#666' }, key: 2 },
+            'Lorem ...'),
     ])
 }
