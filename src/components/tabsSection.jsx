@@ -8,13 +8,15 @@ export default function tabsSection({ active, onChange }) {
                 onClick={onChange('home')}>Home</Buttons >
             <Buttons isActive={active === 'about'}
                 onClick={onChange('about')}>About me</Buttons>
+            {/*  */}
             <Buttons
                 isActive={active === 'notes'}
                 onClick={onChange('notes')}>My notes
             </Buttons>
-            <Buttons
-                isActive={active === 'efect'}
-                onClick={onChange('notes')}>My notes
+
+            {/* modal */}
+            <Buttons isActive={active === 'efect'} onClick={() => onChange('efect')}>
+                Efect
             </Buttons>
         </section>
     )

@@ -9,12 +9,14 @@ import Feedback from './components/Feedback'
 
 
 export default function App() {
-
+  const [visible, setVisible] = useState(true)
   const [tab, setTab] = useState('modal')
+
+  // setTimeout(() => setVisible(false), 3000)
 
   return (
     <div>
-      <Header />
+      {visible && <Header />}
       <main>
         <IntroSection />
 
@@ -31,7 +33,7 @@ export default function App() {
 
         {tab === 'feedback' && <Feedback />}
 
-        {tab === 'effecrt' && <Modal />}
+        {tab === 'effect' && <Modal />}
 
       </main>
     </div >
