@@ -51,17 +51,16 @@ export default function Modal() {
                     <input type="text" className="control" {...input} />
                     <ul>
                         {users
-                            .filter((user) =>
+                            .filter((user) => (
                                 user.name.toLowerCase().includes(input.value.toLowerCase())
                             )
-                            .map((user) =>
-                                < li key={user.id} > {user.name} </li>
-                            ))}
+                                .map((user) =>
+                                    < li key={user.id} > {user.name} </li>
+                                ))}
                         {/* то что полетит в jsx находиться в input */}
                     </ul>
                 </>
             )}
         </section >
-
     )
 }
