@@ -1,6 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import Buttons from "../Buttons/Buttons";
 import { } from 'react-dom'
+import useInput from "../../hooks/useInput";
 
 
 export default function Modal() {
@@ -45,11 +46,22 @@ export default function Modal() {
 
             {loading && <p>Loading...</p>}
 
-            {
-                !loading && <ul>
-                    {users.map(user => <li key={user.id}>{user.name}</li>)}</ul>
-            }
+            {!loading && (
+                <>
+                    <input type="text" className="control" {...input} />
+                    <ul>
+                        {users
+                            .filter((user) =>
+                                user.name.toLowerCase().includes(input.value.toLowerCase())
+                            )
+                            .map((user) =>
+                                < li key={user.id} > {user.name} </li>
+                            ))}
+                        {/* то что полетит в jsx находиться в input */}
+                    </ul>
+                </>
+            )}
         </section >
-    )
 
+    )
 }
